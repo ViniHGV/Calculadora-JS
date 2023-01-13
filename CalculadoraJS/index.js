@@ -1,5 +1,5 @@
 const main = document.querySelector('main')
-const toor = document.querySelector(':root')
+const root = document.querySelector(':root')
 const input = document.getElementById('input')
 const resultInput = document.getElementById('result')
 
@@ -37,5 +37,13 @@ function calculate(){
     resultInput.value = result
 }
 
+document.getElementById('themeSwitcher').addEventListener('click', function(){
+    if(main.dataset.theme == 'dark'){
+        root.style.setProperty('--bg-color', '#f1f5f9')
+        root.style.setProperty('--border-color', '#aaa')
+        root.style.setProperty('--font-color', '#212529')
+        root.style.setProperty('--primary-color', '#26834a')
+    }
+})
 
 
